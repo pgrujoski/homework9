@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flexbox Homework</title>
+    <style>
+        header {
+            background-color: #f41e1e;
+            padding: 10px;
+            text-align: center;
+            height: 60px;
+        }
+
+        h1 {
+            color: white;
+            font-style: oblique;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        nav {
+            font-size: 20px;
+            background-color: #f41e1e;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li a {
+            color: white;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        nav ul li:hover {
+            background-color: rgb(237, 123, 106);
+            color: white;
+            position: relative;
+            top: -2px;
+        }
+
+        .container {
+            background-color: #f41e1e;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .card {
+            font-size: 24px;
+            border: 2px solid black;
+            margin: 5px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        article {
+            background-color: rgba(255, 255, 255, 0.919);
+            width: 250px;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid black;
+            align-items: center;
+        }
+
+        .name {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        .price {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: red;
+            font-style: oblique;
+            font-size: 16px;
+        }
+
+        .description {
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255);
+            padding: 5px;
+            font-style: italic;
+            height: 50px;
+            width: 200px;
+            font-size: 15px;
+        }
+
+        .buy {
+            border-radius: 20px;
+            padding: 5px 20px;
+            background-color: lightgrey;
+            width: 200px;
+        }
+
+        .buy a {
+            text-decoration: none;
+            color: crimson;
+            font-size: 20px;
+        }
+
+
+        .products {
+            background-color: #f41e1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        form input {
+            margin: 20px 0;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 15px;
+            border: 2px solid white;
+        }
+
+        footer {
+            background-color: lightgray;
+            text-align: center;
+            font-size: 12px;
+            margin-top: 0%;
+            padding: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        @media (max-width: 1000px) {
+            article {
+                width: 300px;
+            }
+
+            footer {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 730px) {
+            article {
+                width: 400px;
+            }
+
+            footer {
+                display: block;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sneakers-Shop</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Woman</a></li>
+            <li><a href="#">Man</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Brands</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <article class="card">
+            <img height="240" width="220" src="img/converse.jpeg">
+            <h3 class="name">Converse</h3>
+            <p class="price">3192 ден</p>
+            <p class="description">CLASSIC Chuck Taylor All Star Canvas Black Low</p>
+            <button class="buy"><a
+                    href="https://arthurs.com.mk/produkt/classic-chuck-taylor-all-star-canvas-black-low/">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/nike.jpeg">
+            <h3 class="name">Nike</h3>
+            <p class="price">10590 ден</p>
+            <p class="description">Air force low retro white/pink</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/258243-nike-patiki-air-force-1-low-retro">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/air90.png">
+            <h3 class="name">Nike</h3>
+            <p class="price">8712 ден</p>
+            <p class="description">NIKE Патики Air Max 90 LTR</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/129305-nike-patiki-air-max-90-ltr">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/vans.jpeg">
+            <h3 class="name">VANS</h3>
+            <p class="price">3743 ден</p>
+            <p class="description">VANS Патики MN SKATE SLIP-ON (CHECKERBOARD) BLACK/OF</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/262838-vans-patiki-mn-skate-slip-on-checkerboard-blackof">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/reebok.jpeg">
+            <h3 class="name">Reebok</h3>
+            <p class="price">4118 ден</p>
+            <p class="description">Reebok Патики Classic Leather</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/242239-reebok-patiki-classic-leather">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/air97.png">
+            <h3 class="name">Nike</h3>
+            <p class="price">10043 ден</p>
+            <p class="description">NIKE Патики Air Max 97 SE</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/263972-nike-patiki-air-max-97-se">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/wair90.png">
+            <h3 class="name">Nike</h3>
+            <p class="price">7643 ден</p>
+            <p class="description">NIKE Патики Air Max 90</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/261431-nike-patiki-air-max-90">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/superstar.png">
+            <h3 class="name">Adidas</h3>
+            <p class="price">5910 ден</p>
+            <p class="description">adidas Патики SUPERSTAR XLG W</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/264830-adidas-patiki-superstar-xlg-w">Buy</a></button>
+        </article>
+        <article class="card">
+            <img height="240" width="220" src="img/stansmit.png">
+            <h3 class="name">Adidas</h3>
+            <p class="price">4681 ден</p>
+            <p class="description">adidas Патики STAN SMITH W</p>
+            <button class="buy"><a
+                    href="https://www.buzzsneakers.mk/patiki/263496-adidas-patiki-stan-smith-w">Buy</a></button>
+        </article>
+    </main>
+
+    <section class="products">
+        <h2>Subscribe!</h2>
+        <p>Get in touch with the latest sales, and new products. Register to our mail list, to get the hottest and
+            baddest collections
+            of today, and tomorrow. JOIN TODAY!</p>
+        <form>
+            <input type="email" name="email" placeholder="Enter your email...">
+        </form>
+    </section>
+
+    <footer>
+        <p><a href="#">About</a></p>
+        <p><a href="#">Latest news</a></p>
+        <p><a href="#">Contact</a></p>
+        <p class="copyright">Copyright &copy; 2023 Sneakers shop</p>
+    </footer>
+
+</body>
+
+</html>

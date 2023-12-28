@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid 2</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: gainsboro;
+        }
+
+        header {
+            background-color: aliceblue;
+            padding: 10px;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+
+            text-align: center;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        nav h1 {
+            text-transform: uppercase;
+        }
+
+        nav h1 div:first-child {
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+
+        nav h1 div:last-child {
+            font-weight: 400;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 60px auto;
+
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /* grid-template-rows: 250px 250px 250px ; */
+            grid-auto-rows: 250px 250px 250px;
+            gap: 30px;
+        }
+
+        main div {
+            background-color: bisque;
+            overflow: hidden;
+            /* koga imame preklopuvanje na elementi*/
+
+            border-radius: 6px;
+            border: 16px solid white;
+
+            box-shadow: 3px 3px 3px black;
+        }
+
+        main img {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        /* Domasna 1 */
+
+        @media screen and (max-width: 1000px) {
+            main {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+            main p {
+                font-size: 0.9em;
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+                margin: 10px auto;
+                grid-auto-rows: 350px;
+                font-size: 1.2em;
+            }
+            nav {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            nav h1 {
+                grid-column: 1 / span 4;
+                grid-row: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/">Articles</a>
+            <h1>
+                <div>Express</div>
+                <div>Yourself</div>
+            </h1>
+            <a href="/">Guides</a>
+            <a href="/">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ipsum quo error nisi minus magnam
+                dignissimos culpa possimus iure. Excepturi vel sit harum accusantium ipsa tempore rem nemo veritatis
+                dolore.</p>
+            <a href="/">Read more</a>
+        </div>
+        <div>
+            <img src="images/img1.jpg" alt="model" style="width: 200px; height: auto;">
+        </div>
+
+        <div>
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ipsum quo error nisi minus magnam
+                dignissimos culpa possimus iure. Excepturi vel sit harum accusantium ipsa tempore rem nemo veritatis
+                dolore.</p>
+            <a href="/">Read more</a>
+        </div>
+        <div>
+            <img src="images/img2.jpg" alt="model" style="width: 200px; height: auto;">
+        </div>
+        <div>
+            <img src="images/img3.jpg" alt="model" style="width: 200px; height: auto;">
+        </div>
+
+        <div>
+            <h3>Heading 3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel sed quis, suscipit in illo deleniti. Vel
+                nesciunt neque nobis blanditiis cupiditate, voluptate aspernatur architecto quaerat repudiandae ea quasi
+                minus eligendi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente hic porro explicabo, natus molestias
+                nemo fuga dolorem quidem facilis, fugiat perferendis repudiandae debitis asperiores vel, obcaecati ea
+                eum quisquam alias.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore soluta beatae exercitationem
+                reprehenderit illum inventore corrupti quis. Quisquam alias itaque aperiam a sunt, minus in laudantium
+                culpa commodi fugiat atque.</p>
+
+            <a href="/">Read more</a>
+        </div>
+
+        <div>
+            <img src="images/img1.jpg" alt="model" style="width: 200px; height: auto;">
+        </div>
+    </main>
+</body>
+
+</html>
